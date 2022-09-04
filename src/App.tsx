@@ -3,18 +3,27 @@ import messages from "./data/messages";
 import "./styles/index.scss";
 
 function App() {
-  const [locale, setLocale] = useState(messages.en.Hello);
-
-  console.log(locale);
-
-  const handleLangChange = () => {}
+  const [locale, setLocale] = useState("English");
 
   return (
     <div className="App">
       <div>
-        <button>Change Language</button>
+        <select
+          name="lang"
+          id="lang"
+          onChange={(e) => setLocale(e.target.value)}
+        >
+          <option value="English">English</option>
+          <option value="日本語">日本語</option>
+        </select>
       </div>
-      <div>{locale}</div>
+      <div>
+        {locale === "English" ? (
+          <h1>{messages.en.Hello}</h1>
+        ) : (
+          <h1>{messages.jp.Hello}</h1>
+        )}
+      </div>
     </div>
   );
 }
