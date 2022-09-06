@@ -4,11 +4,18 @@ import messages from "./data/messages";
 import "./styles/index.scss";
 
 function App() {
-  const [locale, setLocale] = useState<string>("English");
+  const [locale, setLocale] = useState("English");
 
   const handleLocaleChange = (event: any) => {
     setLocale(event.target.value);
   };
+
+
+
+  // const result = messages[locale as keyof typeof messages];
+  // console.log(result, "<--- result");
+
+
 
   return (
     <div className="App">
@@ -17,12 +24,13 @@ function App() {
           <option key={lang}>{lang}</option>
         ))}
       </select>
+
       <IntlProvider locale={locale} messages={messages[locale]}>
-          <FormattedMessage
-            id="Home"
-            defaultMessage="Home"
-            values={{locale}}
-          ></FormattedMessage>
+        <FormattedMessage
+          id="Home"
+          defaultMessage="Home"
+          values={{ locale }}
+        ></FormattedMessage>
       </IntlProvider>
     </div>
   );

@@ -1,5 +1,5 @@
 type Messages = {
-  English: {
+  [key: string]: {
     Hello: string;
     Home: string;
     About: string;
