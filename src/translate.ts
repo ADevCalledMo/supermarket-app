@@ -6,11 +6,13 @@ export const messages = {
     Hello: "Hello",
     Home: "Home",
     About: "About",
+    Supermarket: "Supermarket"
   },
   Japanese: {
     Hello: "こんにちは",
     Home: "ホーム",
     About: "アバウト",
+    Supermarket: "スーパマーケット"
   },
 };
 
