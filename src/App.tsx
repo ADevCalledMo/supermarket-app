@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IntlProvider } from "react-intl";
-import translate, { changeLanguage, messages } from "./translate";
-
+import { messages } from "./translate";
+import Navbar from "./components/Navbar";
 import "./styles/index.scss";
 
 function App() {
@@ -9,35 +9,7 @@ function App() {
 
   return (
     <IntlProvider locale={lang} messages={messages[lang]}>
-      <div>
-        <h1>{translate("Supermarket")}</h1>
-      </div>
-      <div>
-        <button
-          onClick={() => {
-            setLang("Japanese");
-            changeLanguage("Japanese");
-          }}
-          disabled={lang === "Japanese"}
-        >
-          <span aria-label="jp-flag" role="img">
-            🇯🇵
-          </span>
-          日本語
-        </button>
-        <button
-          onClick={() => {
-            setLang("English");
-            changeLanguage("English");
-          }}
-          disabled={lang === "English"}
-        >
-          <span aria-label="en-flag" role="img">
-            🇬🇧
-          </span>
-          English
-        </button>
-      </div>
+      <Navbar language={lang} handleLangChange={setLang} />
     </IntlProvider>
   );
 }
