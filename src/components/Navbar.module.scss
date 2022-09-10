@@ -4,5 +4,20 @@
   background: $dark;
   width: 100%;
   padding: 0 1.5rem;
-  height: 100px;
+  height: $headerHeight;
+  @include breakpoint(md) {
+    padding: 0 3rem;
+  }
+  transition: 0.3s ease all;
+
+  &__content {
+    overflow: hidden;
+    color: $light;
+    margin: 0 auto;
+    max-width: 1920px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
