@@ -26,7 +26,9 @@ function App() {
             <div className="product__image">
               <img src={productImages.AppleImage} alt="Apple" />
             </div>
-            <h2>{translate("Apple")}</h2>
+            <h2>
+              {translate("Apple")} <span>Price {translate("ApplePrice")}</span>
+            </h2>
             <p>{translate("AppleDesc")}</p>
           </div>
           <div className="products__buttons__quantity">
@@ -43,6 +45,30 @@ function App() {
           </div>
         </div>
       </div>
+      <footer>
+        <div className="footer__flex">
+          <div className="footer__column">
+            <h3>Supermarket</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta,
+              veritatis.
+            </p>
+          </div>
+          <div className="footer__column"></div>
+          <div className="footer__column">
+            <h3>Title</h3>
+          </div>
+          <div className="footer__column">
+            <h3>Title</h3>
+          </div>
+          <div className="footer__column">
+            <h3>Title</h3>
+          </div>
+          <div className="footer__column">
+            <h3>Title</h3>
+          </div>
+        </div>
+      </footer>
     </IntlProvider>
   );
 }

@@ -10,6 +10,7 @@ export const messages = {
     AddToBasket: "Add to Basket",
     Apple: "Apple",
     AppleDesc: "This is an Apple",
+    ApplePrice: "£0.40p"
   },
   Japanese: {
     Hello: "こんにちは",
@@ -19,6 +20,7 @@ export const messages = {
     AddToBasket: "バスケットに追加",
     Apple: "リンゴ",
     AppleDesc: "これはリンゴです",
+    ApplePrice: "0.80¥"
   },
 };
 
