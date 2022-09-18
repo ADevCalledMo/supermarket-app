@@ -3,6 +3,7 @@ import { IntlProvider } from "react-intl";
 import translate, { messages } from "./translate";
 import { productImages } from "./data/products";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "./styles/index.scss";
 
 function App() {
@@ -45,30 +46,7 @@ function App() {
           </div>
         </div>
       </div>
-      <footer>
-        <div className="footer__flex">
-          <div className="footer__column">
-            <h3>Supermarket</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta,
-              veritatis.
-            </p>
-          </div>
-          <div className="footer__column"></div>
-          <div className="footer__column">
-            <h3>Title</h3>
-          </div>
-          <div className="footer__column">
-            <h3>Title</h3>
-          </div>
-          <div className="footer__column">
-            <h3>Title</h3>
-          </div>
-          <div className="footer__column">
-            <h3>Title</h3>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </IntlProvider>
   );
 }
