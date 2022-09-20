@@ -4,13 +4,14 @@ import translate, { messages } from "./translate";
 import { productImages } from "./data/products";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Storefront from "./components/Storefront";
 import "./styles/index.scss";
 
 function App() {
   const [lang, setLang] = useState("English");
   const [count, setCount] = useState(0);
 
-  const handleIncrement = () => {
+  const handleIncrement: Function = () => {
     setCount(count + 1);
   };
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <IntlProvider locale={lang} messages={messages[lang]}>
       <Navbar language={lang} handleLangChange={setLang} />
+      <Storefront handleSetCount={setCount} count={count} />
       <div className="storefront">
         <div className="product">
           <div className="products__text">
