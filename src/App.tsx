@@ -3,15 +3,13 @@ import { IntlProvider } from "react-intl";
 import translate, { messages } from "./translate";
 import { productImages } from "./data/products";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Storefront from "./components/Storefront";
 import "./styles/index.scss";
 
 function App() {
   const [lang, setLang] = useState("English");
   const [count, setCount] = useState(0);
 
-  const handleIncrement: Function = () => {
+  const handleIncrement = () => {
     setCount(count + 1);
   };
 
@@ -22,16 +20,13 @@ function App() {
   return (
     <IntlProvider locale={lang} messages={messages[lang]}>
       <Navbar language={lang} handleLangChange={setLang} />
-      <Storefront handleSetCount={setCount} count={count} />
       <div className="storefront">
         <div className="product">
           <div className="products__text">
             <div className="product__image">
               <img src={productImages.AppleImage} alt="Apple" />
             </div>
-            <h2>
-              {translate("Apple")} <span>Price {translate("ApplePrice")}</span>
-            </h2>
+            <h2>{translate("Apple")}</h2>
             <p>{translate("AppleDesc")}</p>
           </div>
           <div className="products__buttons__quantity">
@@ -48,7 +43,6 @@ function App() {
           </div>
         </div>
       </div>
-      <Footer />
     </IntlProvider>
   );
 }
